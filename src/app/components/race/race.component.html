@@ -1,0 +1,10 @@
+<h1>
+  Race
+</h1>
+<div *ngFor="let poney of ponies" class="poney-container">
+  <app-poney
+    [poneyId]="poney.id"
+  ></app-poney>
+</div>
+
+<button (click)="handleClick()">Click</button>

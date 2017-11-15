@@ -1,0 +1,16 @@
+.poney-container {
+  padding: 20px;
+  display: block;
+  width: 100%;
+  position: relative;
+
+
+  app-poney {
+    display: block;
+    width: 100%;
+  }
+}
+
+:host {
+  display: block;
+}

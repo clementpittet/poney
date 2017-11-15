@@ -1,0 +1,12 @@
+.poney {
+  display: inline-block;
+  text-align: center;
+  width: 10%;
+  transition: left 1000ms linear;
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}

@@ -13,6 +13,7 @@ export class PoneyComponent implements OnInit {
 
   @Input() poneyId: number;
   poneyData: Poney
+  isDashing: boolean = false
 
   ngOnInit() {
     this.poneyData = this.raceService.ponies.find(poney => {
@@ -20,8 +21,17 @@ export class PoneyComponent implements OnInit {
     })
   }
 
-  run() {
-    
+  toggleDash() {
+    this.isDashing = true
+    setTimeout(() => {
+      this.isDashing = false
+    }, 1000)
   }
 
+  dash() {
+    if (this.raceService.isRacing) {
+      this.poneyData.distance += 10;
+      this.toggleDash()
+    }
+  }
 }

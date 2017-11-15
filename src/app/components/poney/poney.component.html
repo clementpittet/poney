@@ -1,5 +1,11 @@
-<div class="poney" [style.left]="poneyData.distance + '%'">
-  <img [src]="poneyData.img" />
-  {{poneyData.name}}
-  {{poneyData.distance}}
+<div class="poney" (dblclick)="dash()" [style.left]="poneyData.distance + '%'">
+
+  <img *ngIf="!isDashing; else rainbow" [src]="poneyData.img" />
+  <ng-template #rainbow>
+    <img [src]="poneyData.rainbowImg" />
+  </ng-template>
+
+  <strong>
+    {{poneyData.name}}
+  </strong>
 </div>

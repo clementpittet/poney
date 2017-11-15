@@ -1,5 +1,4 @@
 .poney-container {
-  padding: 20px;
   display: block;
   width: 100%;
   position: relative;
@@ -13,4 +12,5 @@
 
 :host {
   display: block;
+  border-right: solid 2px silver;
 }

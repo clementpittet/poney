@@ -1,0 +1,33 @@
+<h1>Créer une course</h1>
+
+<form (submit)="handleSubmit($event)" [formGroup]="race">
+  
+  <mat-form-field>
+    <input matInput placeholder="Nom" formControlName="name">
+    <mat-error *ngIf="race.controls.name.hasError('minlength') && !race.controls.name.hasError('required')">
+      Le nom doit comporter au moins 2 caractères
+    </mat-error>
+    <mat-error *ngIf="race.controls.name.hasError('required')">
+      Le nom est <strong>requis</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field>
+    <mat-select placeholder="Poneys" multiple formControlName="ponies">
+      <mat-option *ngFor="let poney of ponies$ | async" [value]="poney.id">
+        {{poney.name}}
+        <img [src]="poney.rainbowImg" />
+      </mat-option>
+    </mat-select>
+    <mat-error *ngIf="race.controls.ponies.hasError('minPonies')">
+      Vous devez choisir {{race.controls.ponies.errors.minPonies}} poneys minimum
+    </mat-error>
+  </mat-form-field>
+  
+  <br />
+  <br />
+
+  <button [disabled]="race.invalid" type="submit" mat-raised-button color="primary">Créer la course</button>
+</form>

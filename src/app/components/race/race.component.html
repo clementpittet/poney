@@ -1,3 +1,13 @@
+<h1>Course</h1>
+
+<div [@bubbleState]="bubbleInflation" class="live-bubble">
+  LIVE!
+</div>
+
+<div class="flag">
+  <img src="http://www.crwflags.com/fotw/images/f/f1-fin.gif" />
+</div>
+
 <div *ngFor="let poney of ponies" class="poney-container">
   <app-poney
     [poneyId]="poney.id"

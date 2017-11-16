@@ -29,7 +29,13 @@ export class PoneyComponent implements OnInit {
   }
 
   dash() {
-    if (this.raceService.isRacing) {
+    let isRacing = this.raceService.races.find(race => {
+      return race.isRacing && typeof race.ponies.find(poneyId => {
+        return poneyId == this.poneyId
+      }) != "undefined"
+    })
+
+    if (isRacing) {
       this.poneyData.distance += 10;
       this.toggleDash()
     }

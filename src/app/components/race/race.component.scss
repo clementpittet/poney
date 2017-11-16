@@ -2,15 +2,38 @@
   display: block;
   width: 100%;
   position: relative;
-
+  border-right: solid 2px silver;
 
   app-poney {
     display: block;
     width: 100%;
+    background-color: #81c784;
+    border: solid 1px white;
   }
 }
 
-:host {
-  display: block;
-  border-right: solid 2px silver;
+.flag {
+  width: 100%;
+  position: relative;
+  height: 47px;
+
+  img {
+    display: inline-block;
+    width: 5%;
+    right: 5%;
+    position: absolute;
+  }
+}
+
+h1 {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.live-bubble {
+  padding: 5px 10px;
+  border-radius: 6px;
+  background-color: orangered;
+  color: white;
+  display: inline-block;
 }

@@ -1,0 +1,8 @@
+<h1>Voir les courses</h1>
+
+<ul>
+  <li *ngFor="let race of races$ | async">
+    <a [routerLink]="['/race', race.id]">{{race.name}}</a>
+  </li>
+</ul>
+

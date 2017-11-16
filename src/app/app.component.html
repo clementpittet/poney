@@ -1,5 +1,7 @@
-<h1>
-  Poney Race
-</h1>
-<img class="flag" src="http://www.crwflags.com/fotw/images/f/f1-fin.gif" />
-<app-race></app-race>
+<a [routerLink]="['/home']">
+  <button mat-raised-button color="primary">Voir les courses</button>
+</a>
+<a [routerLink]="['/race-create']">
+  <button mat-raised-button color="primary">Créer une course</button>
+</a>
+<router-outlet></router-outlet>

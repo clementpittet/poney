@@ -1,0 +1,27 @@
+{
+  "ponies": [{
+    "id": 0,
+    "name": "Malthe E. Bertelsen",
+    "img": "http://ponyracer.ninja-squad.com/assets/images/pony-green-running.gif",
+    "rainbowImg": "http://ponyracer.ninja-squad.com/assets/images/pony-green-rainbow.gif",
+    "distance": 0
+  }, {
+    "id": 1,
+    "name": "Edmondo Cremonesi",
+    "img": "http://ponyracer.ninja-squad.com/assets/images/pony-purple-running.gif",
+    "rainbowImg": "http://ponyracer.ninja-squad.com/assets/images/pony-purple-rainbow.gif",
+    "distance": 0
+  }, {
+    "id": 2,
+    "name": "Camille Brault",
+    "img": "http://ponyracer.ninja-squad.com/assets/images/pony-orange-running.gif",
+    "rainbowImg": "http://ponyracer.ninja-squad.com/assets/images/pony-orange-rainbow.gif",
+    "distance": 0
+  }],
+  "races": [{
+    "id": 0,
+    "ponies": [0, 1],
+    "isRacing": false,
+    "name": "London"
+  }]
+}

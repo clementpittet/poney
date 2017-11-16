@@ -49,8 +49,9 @@ export class RaceCreateComponent implements OnInit {
 
   handleSubmit(event: any) {
     if (this.race.valid) {
-      this.raceService.setRace(this.race.value)
-      this.routerService.navigateByUrl('/home')
+      this.raceService.setRace(this.race.value).subscribe(result => {
+        this.routerService.navigateByUrl('/home')
+      })
     }
   }
 

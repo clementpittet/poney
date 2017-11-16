@@ -95,7 +95,7 @@ export class RaceService {
   setRace(race) {
     let id = Math.floor(Math.random() * 100)
 
-    this.races.push({
+    return this.http.post('http://localhost:3000/races', {
       id,
       isRacing: false,
       ...race
